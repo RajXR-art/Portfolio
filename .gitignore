@@ -3,7 +3,6 @@ videos/*.mp4
 *.mp4
 
 # Ignore binary resumes / documents if desired
-Downloads/*.docx
 Downloads/desktop.ini
 
 # System files
