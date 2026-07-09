@@ -313,6 +313,22 @@ section {
     opacity: 0.6;
 }
 
+/* Disable interactiveness on cards without video */
+.project-card:not([data-video-src]) {
+    cursor: default;
+}
+.project-card:not([data-video-src]):hover {
+    transform: none;
+    box-shadow: none;
+    background: var(--bg-card);
+}
+.project-card:not([data-video-src]):hover::before {
+    opacity: 0;
+}
+.project-card:not([data-video-src]):hover .card-media img {
+    transform: none;
+}
+
 .card-media {
     position: relative;
     width: 100%;

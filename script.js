@@ -156,6 +156,8 @@ let controlsTimeout;
 projectCards.forEach(card => {
     card.addEventListener('click', () => {
         const videoSrc = card.getAttribute('data-video-src');
+        if (!videoSrc) return; // Skip cards without video sources
+        
         const title = card.getAttribute('data-project-title');
         const desc = card.getAttribute('data-project-desc');
         
