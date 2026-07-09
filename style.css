@@ -505,6 +505,7 @@ section {
     border-radius: 20px;
     width: 100%;
     max-width: 1000px;
+    max-height: 90vh;
     overflow: hidden;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px var(--glow-primary);
     transform: scale(0.9) translateY(20px);
@@ -734,6 +735,7 @@ section {
 .modal-details {
     padding: 1.5rem;
     border-top: 1px solid var(--border-color);
+    overflow-y: auto;
 }
 
 .modal-details h4 {
