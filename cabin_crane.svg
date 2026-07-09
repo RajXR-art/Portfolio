@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060814" />
+      <stop offset="100%" stop-color="#11162d" />
+    </linearGradient>
+    <linearGradient id="crane-yellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+    <linearGradient id="steel-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#be123c" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+
+  <!-- Grid Lines (Industrial Theme) -->
+  <line x1="20" y1="180" x2="380" y2="180" stroke="rgba(255, 255, 255, 0.05)" stroke-width="2" />
+  <line x1="20" y1="140" x2="380" y2="140" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />
+  <line x1="20" y1="100" x2="380" y2="100" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" />
+
+  <!-- Overhead Runway Gantry Rails (Top) -->
+  <rect x="30" y="40" width="340" height="10" fill="rgba(255,255,255,0.06)" rx="2" />
+  <line x1="30" y1="45" x2="370" y2="45" stroke="#475569" stroke-width="2" />
+
+  <!-- Crane Girder / Bridge -->
+  <rect x="120" y="45" width="160" height="16" fill="url(#crane-yellow)" rx="2" stroke="#1e293b" stroke-width="1.5" />
+  
+  <!-- Diagonal Truss Details on Girder -->
+  <path d="M 125,45 L 135,61 M 145,45 L 135,61 M 145,45 L 155,61 M 165,45 L 155,61 M 165,45 L 175,61 M 185,45 L 175,61 M 185,45 L 195,61 M 205,45 L 195,61 M 205,45 L 215,61 M 225,45 L 215,61 M 225,45 L 235,61 M 245,45 L 235,61 M 245,45 L 255,61 M 265,45 L 255,61 M 265,45 L 275,61" stroke="#854d0e" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Trolley (Moves left/right on bridge) -->
+  <rect x="180" y="58" width="40" height="12" fill="#334155" rx="1" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Hoist Cables (Steel ropes) -->
+  <line x1="192" y1="70" x2="192" y2="120" stroke="#94a3b8" stroke-width="1.5" />
+  <line x1="208" y1="70" x2="208" y2="120" stroke="#94a3b8" stroke-width="1.5" />
+
+  <!-- Hook Block & Spreader Beam -->
+  <rect x="185" y="118" width="30" height="8" fill="#1e293b" rx="1" />
+  <!-- Electro-Magnet / Hook assembly -->
+  <rect x="175" y="126" width="50" height="10" fill="#475569" rx="2" />
+  <path d="M 185,126 L 185,133 M 215,126 L 215,133" stroke="#334155" stroke-width="3" />
+
+  <!-- Hot Steel Billet (Lifting Load) -->
+  <!-- Red-orange glowing block representing steel billet -->
+  <g filter="url(#glow)">
+    <rect x="150" y="138" width="100" height="24" fill="url(#steel-glow)" rx="2" stroke="#fda4af" stroke-width="1" />
+    <path d="M 155,142 L 245,142" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+  </g>
+
+  <!-- Sparks / Heat Waves -->
+  <circle cx="160" cy="168" r="1.5" fill="#fb7185" opacity="0.8" />
+  <circle cx="240" cy="166" r="1" fill="#f43f5e" opacity="0.6" />
+  <circle cx="200" cy="170" r="1.5" fill="#f43f5e" opacity="0.9" />
+  <circle cx="180" cy="165" r="2" fill="#fda4af" opacity="0.7" />
+
+  <!-- Labels -->
+  <text x="20" y="28" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="9" letter-spacing="1">CABIN CRANE &amp; LOGISTICS</text>
+  <text x="330" y="28" fill="#eab308" font-family="sans-serif" font-size="9" font-weight="bold">BILLET VR</text>
+</svg>

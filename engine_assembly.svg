@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03060a" />
+      <stop offset="100%" stop-color="#0f1622" />
+    </linearGradient>
+    <linearGradient id="violet-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+
+  <!-- Technical Exploded View Grid Lines -->
+  <line x1="200" y1="30" x2="200" y2="170" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="8 6" />
+  <line x1="120" y1="100" x2="280" y2="100" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="8 6" />
+
+  <!-- Gears / Cogs Silhouette -->
+  <!-- Gear 1 (Right background) -->
+  <g transform="translate(250, 120) scale(0.65)" opacity="0.25">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#fff" stroke-width="6" />
+    <!-- Teeth -->
+    <path d="M-6,-36 L6,-36 L4,-30 L-4,-30 Z M-6,36 L6,36 L4,30 L-4,30 Z M-36,-6 L-36,6 L-30,4 L-30,-4 Z M36,-6 L36,6 L30,4 L-30,-4 Z" fill="#fff" />
+  </g>
+
+  <!-- Central Assembly Focus: Engine Piston Silhouette -->
+  <g transform="translate(200, 100) scale(0.9)" filter="url(#glow)">
+    <!-- Piston crown -->
+    <rect x="-30" y="-45" width="60" height="30" rx="3" fill="none" stroke="url(#violet-glow)" stroke-width="3" />
+    <line x1="-30" y1="-33" x2="30" y2="-33" stroke="url(#violet-glow)" stroke-width="1.5" />
+    <line x1="-30" y1="-25" x2="30" y2="-25" stroke="url(#violet-glow)" stroke-width="1.5" />
+    
+    <!-- Gudgeon pin / connection -->
+    <circle cx="0" cy="-20" r="8" fill="none" stroke="#fff" stroke-width="2" />
+    
+    <!-- Connecting Rod -->
+    <rect x="-6" y="-12" width="12" height="50" rx="2" fill="none" stroke="url(#violet-glow)" stroke-width="2.5" />
+    
+    <!-- Crank end -->
+    <circle cx="0" cy="38" r="14" fill="none" stroke="url(#violet-glow)" stroke-width="3" />
+    <circle cx="0" cy="38" r="5" fill="#fff" />
+  </g>
+
+  <!-- Assembly Spanner tool silhouette on side -->
+  <g transform="translate(100, 60) rotate(-35) scale(0.7)" opacity="0.3">
+    <rect x="-4" y="-25" width="8" height="50" fill="#fff" rx="2" />
+    <!-- Open spanner end -->
+    <path d="M-12,-25 A12,12 0 0,1 12,-25 L8,-20 A6,6 0 0,0 -8,-20 Z" fill="#fff" />
+    <circle cx="0" cy="25" r="8" fill="none" stroke="#fff" stroke-width="3" />
+  </g>
+
+  <!-- Labels -->
+  <text x="20" y="30" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="9" letter-spacing="1">SEQUENCE ASSEMBLY VALIDATION</text>
+  <text x="325" y="30" fill="#a855f7" font-family="sans-serif" font-size="9" font-weight="bold">VR CAD</text>
+</svg>
